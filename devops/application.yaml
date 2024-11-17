@@ -31,13 +31,13 @@ spec:
         argocd-image-updater.argoproj.io/image-list: devops-react-{{.namespace}}=339712738323.dkr.ecr.ap-south-1.amazonaws.com/devops-react
         argocd-image-updater.argoproj.io/nobita-{{.namespace}}.force-update: "true"
         argocd-image-updater.argoproj.io/nobita-{{.namespace}}.update-strategy: latest
-        argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/release-repo
+        argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/Releaserepo
         argocd-image-updater.argoproj.io/git-branch: master
         argocd-image-updater.argoproj.io/nobita-{{.namespace}}.allow-tags: '{{.imageTag}}'
     spec:
       project: default
       source:
-        repoURL: https://github.com/milansuras/Devops-ReleaseRepo.git
+        repoURL: https://github.com/milansuras/Devops-Releaserepo.git
         targetRevision: master
         path: devops
         helm:
